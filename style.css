@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100svw;
+    height: 100svh;
+    background-color: #333;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 90px;
+    height: 100svh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    transition: width 0.3s;
+}
+
+.menu {
+    width: 100%;
+    height: calc(100svh - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submenu {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.submenu ul {
+    list-style-type: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+    
+    gap: 20px;
+    width: 100%;
+
+}
+
+.icon {
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.submenu ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-transform: uppercase;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.desc {
+    display: none;
+    font-size: 1.1rem;
+}
+
+.logo {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    transition: all 0.3s;
+}
+
+.logo-img {
+    background: url("./assets/icon.svg") center/cover no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.logo-title {
+    background: url("./assets/title.svg") center/cover no-repeat;
+    width: 80px;
+    height: 18px;
+}
+
+.container:hover .logo {
+    flex-direction: row;
+}
+
+.container:hover .desc {
+    display: block;
+}
+
+.container:hover {
+    width: 250px;
+}
+
+.submenu ul li:hover {
+    color: yellow;
+    scale: 1.1;
+}
